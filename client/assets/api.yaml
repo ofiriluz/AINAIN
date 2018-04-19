@@ -1,0 +1,51 @@
+swagger: "2.0"
+info:
+  description: "agilbzin please."
+  version: "1.0.0"
+  title: "A Questionable API"
+host: "ainain.com"
+basePath: "/api"
+tags:
+- name: "Crafted Application Programmable Interfaces"
+  description: "A set of API instructions to wild up the mood"
+paths:
+  /riddleMeThis:
+    get:
+      summary: "An interesting riddle"
+      description: "Solveable? we shall see about that"
+      tags:
+      - "Crafted Application Programmable Interfaces"
+      produces: 
+      - "application/json"
+      responses:
+        200:
+          description: "Solve, or die"
+          schema:
+            $ref: "#/definitions/Riddle"
+        400:
+          description: "No more riddles for you sir"
+  /fireItUp:
+    get:
+      summary: "No words needed"
+      tags:
+      - "Crafted Application Programmable Interfaces"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "A meaningful number"
+          schema:
+            $ref: "#/definitions/Smokey"
+        400:
+          description: "A meaningful failure"
+definitions:
+  Riddle:
+    type: "object"
+    properties:
+      question:
+        type: "string"
+  Smokey:
+    type: "object"
+    properties:
+      count:
+        type: "integer"

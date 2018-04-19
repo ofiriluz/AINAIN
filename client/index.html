@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" ng-app="AINAIN">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js" type="text/javascript"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css"/>
 
-    <script src="views/views.js" type="text/javascript"></script>
-    <script src="views/login/login.js" type="text/javascript"></script>
-    <script src="views/api/api.js" type="text/javascript"></script>
-    <script src="AINAIN.js" type="text/javascript"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular/angular.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-route/angular-route.min.js" type="text/javascript"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="views/views.modules.js" type="text/javascript"></script>
+    <script src="views/login/login.view.js" type="text/javascript"></script>
+    <script src="views/api/api.view.js" type="text/javascript"></script>
+    <script src="AINAIN.js" type="text/javascript"></script> 
 </head>
 <body>
     <div id="view_div" ng-view></div>

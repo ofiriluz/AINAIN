@@ -1,12 +1,17 @@
 angular.module('AINAIN.views.login')
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/login', {
-            templateUrl: 'views/login/login.html',
+            templateUrl: 'views/login/login.view.html',
             controller: 'LoginController'
         })
     }])
     .controller("LoginController", ['$scope',
         function($scope) {
+            $scope.getPassphrase  = function(){
+                // TODO                
+            }
+
+
             $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function(){
                 particlesJS('particles-js',
                     {

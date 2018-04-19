@@ -1,0 +1,12 @@
+{
+  "name": "ainain.client",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "^1.6.10",
+    "bootstrap": "^4.1.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "redoc": "^2.0.0-alpha.17"
+  }
+}
