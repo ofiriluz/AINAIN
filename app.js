@@ -9,6 +9,8 @@ var cors = require('cors');
 
 var index = require('./routes/index');
 var api = require('./routes/api');
+var login = require('./routes/login');
+var secrets = require('./routes/secrets');
 
 var app = express();
 
@@ -20,7 +22,7 @@ app.use(express.static(path.join(__dirname, "client")));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.all(cors({origin: null}));
@@ -38,6 +40,8 @@ app.use(function (req, res, next) {
 
 app.use('/', index);
 app.use('/api',api);
+app.use('/control',secrets);
+app.use('/control',login);
 
 
 // catch 404 and forward to error handler

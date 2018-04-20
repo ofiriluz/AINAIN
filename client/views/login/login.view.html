@@ -2,14 +2,18 @@
 <div class="container">
     <div id="login-box">
         <div class="logo">
-            <img src="https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/Python_logo-512.png" 
+            <img src="assets/python.png" 
                  class="img img-responsive img-circle mx-auto d-block" width="100" height="100"/>
-            <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+            <h1 class="logo-caption" ><span class="tweak">H</span>utch</h1>
         </div>
         <div class="controls">
-            <input type="text" name="username" placeholder="Username" class="form-control" />
-            <input type="text" name="username" placeholder="Password" class="form-control" />
-            <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
+            <div ng-if="isError" class="error-style">
+                <i class="fa fa-times-circle"></i>
+                Incorrect username or password.
+            </div>
+            <input type="text" name="username" placeholder="Username" ng-model="username" class="form-control" style="font-size: 0.75em;"/>
+            <input type="password" name="password" placeholder="Password" ng-model="password" class="form-control" style="font-size: 0.75em;"/>
+            <button type="button" class="btn btn-default btn-block btn-custom" ng-click="login()" style="font-size: 0.75em;">Login</button>
         </div>
     </div>
 </div>

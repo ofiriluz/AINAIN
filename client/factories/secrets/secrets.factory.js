@@ -6,7 +6,7 @@ angular.module('AINAIN.factories.secrets')
     .factory('SecretsFactory', ['$http', function($http){
         return {
             getPassphrase: function() {
-                return $http.get(SERVER_ADDRESS + '/secrets/passPhrase');
+                return $http.get(SERVER_ADDRESS + '/control/passPhrase');
             }
         }
     }]);

@@ -7,5 +7,5 @@ angular.module('AINAIN.views.api')
 }])
 .controller("APIController", ['$scope',
     function($scope) {
-        
+    
 }]);

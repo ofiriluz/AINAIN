@@ -5,8 +5,12 @@ angular.module('AINAIN.views.login')
             controller: 'LoginController'
         })
     }])
-    .controller("LoginController", ['$scope', 'SecretsFactory', 'LoginFactory', 'APIFactory',
-        function($scope, SecretsFactory, LoginFactory, APIFactory) {
+    .controller("LoginController", ['$scope', '$location', 'SecretsFactory', 'LoginFactory', 'APIFactory',
+        function($scope, $location, SecretsFactory, LoginFactory, APIFactory) {
+            $scope.username = '';
+            $scope.password = '';
+            $scope.isError = false;
+
             $scope.getPassphrase  = function() {
                 return SecretsFactory.getPassphrase().then((passPhrase) => {
                     console.log("Passphrase = " + passPhrase);
@@ -14,18 +18,19 @@ angular.module('AINAIN.views.login')
             }
 
             $scope.login = function() {
-                LoginFactory.login($scope.username, $scope.password).then(function(res){
-                    if(res.result === "SUCCESS") {
-                        // TODO
+                LoginFactory.performLogin($scope.username, $scope.password).then(function(res){
+                    if(res.data.result === "SUCCESS") {
+                        LoginFactory.setLoginState('ACCEPTED');
+                        $location.url('/api');
                     }
                     else {
-                        // TODO
+                        $scope.isError = true;
                     }
                 })
             }
 
 
-            $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function(){
+            $.getScript("node_modules/particles.js/particles.js", function(){
                 particlesJS('particles-js',
                     {
                         "particles": {
