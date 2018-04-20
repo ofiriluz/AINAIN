@@ -5,10 +5,23 @@ angular.module('AINAIN.views.login')
             controller: 'LoginController'
         })
     }])
-    .controller("LoginController", ['$scope',
-        function($scope) {
-            $scope.getPassphrase  = function(){
-                // TODO                
+    .controller("LoginController", ['$scope', 'SecretsFactory', 'LoginFactory', 'APIFactory',
+        function($scope, SecretsFactory, LoginFactory, APIFactory) {
+            $scope.getPassphrase  = function() {
+                return SecretsFactory.getPassphrase().then((passPhrase) => {
+                    console.log("Passphrase = " + passPhrase);
+                })
+            }
+
+            $scope.login = function() {
+                LoginFactory.login($scope.username, $scope.password).then(function(res){
+                    if(res.result === "SUCCESS") {
+                        // TODO
+                    }
+                    else {
+                        // TODO
+                    }
+                })
             }
 
 
