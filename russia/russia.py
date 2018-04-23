@@ -2,14 +2,17 @@ import winreg
 import ctypes
 import pygame
 import threading
+import os, sys
 
 SUCC_VAL = 1337
 SUCC_REAL_VAL = 1904
 
 
 def startAudioAsync():
+    APP_FOLDER = os.path.dirname(os.path.realpath(sys.argv[0]))
+    full_path = os.path.join(APP_FOLDER, "assets/ussr.mp3")
     pygame.mixer.init()
-    pygame.mixer.music.load('D:/AINAIN/russia/assets/ussr.mp3')
+    pygame.mixer.music.load(full_path)
     pygame.mixer.music.play()
 
 def getAgilBzinRegValue():
