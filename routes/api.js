@@ -19,7 +19,7 @@ router.get('/fireItUp', function(req, res) {
 router.get('/climbMe', function(req, res) {
     fs.readFile('assets/ascii_kir_tippus.png', (err, img) => {
         if(err){
-            res.error(err);
+            res.send(err);
         }
         res.writeHead(200, {
             'Content-Type': 'image/png',
@@ -31,6 +31,19 @@ router.get('/climbMe', function(req, res) {
 
 router.get('/doABarrelRoll', function(req, res) {
     res.render('assets/barrel_roll');
+})
+
+router.get('/yee', function(req, res){
+    fs.readFile('assets/yee.mp4', (err, vid) => {
+        if(err){
+            res.send(err);
+        }
+        res.writeHead(200, {
+            'Content-Type': 'video/mp4',
+            'Content-Length': vid.length
+        });
+        res.end(vid);
+    })
 })
 
 module.exports = router;

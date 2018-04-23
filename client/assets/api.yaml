@@ -1,72 +1,88 @@
 swagger: "2.0"
 info:
-  description: "agilbzin please."
-  version: "1.0.0"
+  description: "agilbzin feigin pls :')'"
+  version: "4.2.0"
   title: "A Questionable API"
 host: "ainain.com"
 basePath: "/api"
 tags:
-- name: "Crafted Application Programmable Interfaces"
+- name: "literally us api fam"
   description: "A set of API instructions to wild up the mood"
 paths:
   /riddleMeThis:
     get:
-      summary: "An interesting riddle"
-      description: "Solveable? we shall see about that"
+      summary: "riddle of the rocks"
+      description: "Lemon? Not this time"
       tags:
-      - "Crafted Application Programmable Interfaces"
+      - "literally us api fam"
       produces: 
       - "application/json"
       responses:
         200:
-          description: "Solve, or die"
+          description: ":')"
           schema:
             $ref: "#/definitions/Riddle"
         400:
-          description: "No more riddles for you sir"
+          description: ":("
   /fireItUp:
     get:
-      summary: "No words needed"
+      summary: "#420 #blazeIt"
       tags:
-      - "Crafted Application Programmable Interfaces"
+      - "literally us api fam"
       produces:
       - "application/json"
       responses:
         200:
-          description: "A meaningful number"
+          description: "ayy lmao fam you so lit"
           schema:
             $ref: "#/definitions/Smokey"
         400:
-          description: "A meaningful failure"
+          description: "How can one fail if stoned?"
   /climbMe:
     get:
-      summary: "Soon..."
+      summary: "I will sho u de wae"
       tags:
-      - "Crafted Application Programmable Interfaces"
+      - "literally us api fam"
       produces:
       - "image/png"
       responses:
         200:
-          description: "BLA"
+          description: "Follow the queen"
         400:
-          description: "CAKE"
+          description: "You are the fake qween. Buddahs, spit on her"
   /doABarrelRoll:
     get:
-      summary: "123"
+      summary: "Hopsy Daisy"
       tags:
-      - "Crafted Application Programmable Interfaces"
+      - "literally us api fam"
       produces:
       - "index/html"
       responses:
         200:
-          description: "A"
+          description: "works in google as well"
         400:
-          description: "B"
+          description: "ANGERY"
+  /yee:
+    get:
+      summary: "yee"
+      tags:
+      - "literally us api fam"
+      produces:
+      - "video/mp4"
+      responses:
+        200:
+          description: "baba baba ba baba ba baba ba ba ba ba ba ba ba"
+        400:
+          description: "YEE"
 definitions:
   Riddle:
     type: "object"
     properties:
       question:
+        type: "string"
+      path:
+        type: "string"
+      key:
         type: "string"
   Smokey:
     type: "object"
