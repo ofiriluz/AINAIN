@@ -13,7 +13,7 @@ angular.module('AINAIN.views.login')
 
             $scope.getPassphrase  = function() {
                 return SecretsFactory.getPassphrase().then((passPhrase) => {
-                    console.log("Passphrase = " + passPhrase);
+                    console.log("Passphrase = " + passPhrase.data.PHRASE);
                 })
             }
 

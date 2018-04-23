@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Do a barrel roll
+  </title>
+  <meta charset='utf-8' />
+  <meta name='description' content='' />
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <style>
+    body { margin: 1em; font-size: 1.0em; line-height: 1.23; text-align: center; }
+    
+    body, button, input, select, textarea { font-family: Univers, Calibri, Gill Sans, Myriad Pro, Tahoma, Geneva, Helvetica Neue, sans-serif; color: rgb(3%, 3%, 3%); }
+    
+    ::-moz-selection { background: rgb(0%, 20%, 98%); color: #fff; text-shadow: none; }
+    ::selection { background: rgb(0%, 20%, 98%); color: #fff; text-shadow: none; }
+    
+    a { color: rgb(20%, 20%, 98%); }
+    a:visited { color: rgb(50%, 20%, 98%); }
+    
+    img, video {max-width: 100%; } 
+    
+    footer {margin-top: 2em; font-size: .9em}
+  </style>
+  <script>
+    (function(){
+        var template = '-p-transition: all 4s ease-out; -p-transform: rotate(-d-deg); ', prefixes = ['', '-moz-', '-webkit-', '-o-'], stlyeAttr = ''; 
+        
+        for (var i=prefixes.length; i-- >= 0;) {
+        stlyeAttr += template.replace(/-p-/g, prefixes[i]||'')
+        }
+        
+        window.barrelRollDeg = window.barrelRollDeg ? barrelRollDeg + 360: 360;
+        
+        stlyeAttr = stlyeAttr.replace(/-d-/g, barrelRollDeg);
+        
+        document.body.setAttribute('style', stlyeAttr);
+    })();
+  </script>
+</head>
+<body>
+  
+  <img src="../assets/nergroid_omri_climb.jpg" alt="star fox 64 arwing">
+  
+  <h1>
+    <a href="javascript:(function(){for(var%20b=['','-moz-','-webkit-','-o-'],a='',c=b.length;c--%20>=0;)a+='-p-transition:%20all%204s%20ease-out;%20-p-transform:%20rotate(-d-deg);%20'.replace(/-p-/g,b[c]||'');window.barrelRollDeg=window.barrelRollDeg?barrelRollDeg+360:360;a=a.replace(/-d-/g,barrelRollDeg);document.body.setAttribute('style',a)})();">Like</a>
+  </h1>
+  
+</body>

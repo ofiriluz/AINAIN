@@ -38,6 +38,30 @@ paths:
             $ref: "#/definitions/Smokey"
         400:
           description: "A meaningful failure"
+  /climbMe:
+    get:
+      summary: "Soon..."
+      tags:
+      - "Crafted Application Programmable Interfaces"
+      produces:
+      - "image/png"
+      responses:
+        200:
+          description: "BLA"
+        400:
+          description: "CAKE"
+  /doABarrelRoll:
+    get:
+      summary: "123"
+      tags:
+      - "Crafted Application Programmable Interfaces"
+      produces:
+      - "index/html"
+      responses:
+        200:
+          description: "A"
+        400:
+          description: "B"
 definitions:
   Riddle:
     type: "object"
