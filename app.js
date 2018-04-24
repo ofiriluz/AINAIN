@@ -18,6 +18,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'client'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.set('json spaces', 2);
 app.use(express.static(path.join(__dirname, "client")));
 
 app.use(logger('dev'));

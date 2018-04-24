@@ -21,7 +21,7 @@ angular.module('AINAIN.views.login')
                 LoginFactory.performLogin($scope.username, $scope.password).then(function(res){
                     if(res.data.result === "SUCCESS") {
                         LoginFactory.setLoginState('ACCEPTED');
-                        $location.url('/api');
+                        $location.url('/swagger');
                     }
                     else {
                         $scope.isError = true;

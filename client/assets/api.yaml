@@ -38,6 +38,8 @@ paths:
             $ref: "#/definitions/Smokey"
         400:
           description: "How can one fail if stoned?"
+          schema:
+            $ref: "#/definitions/SmokeyFailure"
   /climbMe:
     get:
       summary: "I will sho u de wae"
@@ -78,14 +80,17 @@ definitions:
   Riddle:
     type: "object"
     properties:
-      question:
+      HKEY:
         type: "string"
-      path:
-        type: "string"
-      key:
+      PATH:
         type: "string"
   Smokey:
     type: "object"
     properties:
-      count:
+      SMOKE:
         type: "integer"
+  SmokeyFailure:
+    type: "object"
+    properties:
+      MESSAGE:
+        type: "string"

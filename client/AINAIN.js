@@ -1,6 +1,6 @@
 angular.module('AINAIN', ['ngRoute',
     'AINAIN.views.login',
-    'AINAIN.views.api',
+    'AINAIN.views.swagger',
     'AINAIN.factories.login'])
     .config(['$routeProvider', '$locationProvider', 'LoginFactoryProvider', function ($routeProvider, $locationProvider, LoginFactoryProvider) {
         $locationProvider.hashPrefix('');

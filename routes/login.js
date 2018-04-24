@@ -14,8 +14,9 @@ router.post('/login', function(req, res){
         password === DEFAULT_PASSWORD) {
             res.json({result: "SUCCESS"});
     }
-
-    res.json({result: "FAILURE"});
+    else {
+        res.json({result: "FAILURE"});
+    }
 });
 
 module.exports = router;
